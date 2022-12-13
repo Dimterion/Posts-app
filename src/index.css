@@ -191,12 +191,14 @@ button {
 
 .nameInput {
   margin-bottom: 2rem;
-  /* background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat; */
+  background: url('./assets/svg/badgeIcon.svg') #ffffff 1.5% center no-repeat;
+  background-size: 25px;
 }
 
 .emailInput {
   margin-bottom: 2rem;
-  /* background: url('./assets/svg/personIcon.svg') #ffffff 2.5% center no-repeat; */
+  background: url("./assets/svg/personIcon.svg") #ffffff 1.5% center no-repeat;
+  background-size: 25px;
 }
 
 .passwordInputDiv {
@@ -205,15 +207,17 @@ button {
 
 .passwordInput {
   margin-bottom: 2rem;
-  /* background: url('./assets/svg/lockIcon.svg') #ffffff 2.5% center no-repeat; */
+  background: url("./assets/svg/lockIcon.svg") #ffffff 1.5% center no-repeat;
+  background-size: 25px;
 }
 
 .showPassword {
   cursor: pointer;
   position: absolute;
-  top: -4%;
+  top: -8%;
   right: 1%;
   padding: 1rem;
+  width: 60px;
 }
 
 .forgotPasswordLink {
