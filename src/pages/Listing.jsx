@@ -56,7 +56,6 @@ function Listing() {
           </SwiperSlide>
         ))}
       </Swiper>
-
       <div
         className="shareIconDiv"
         onClick={() => {
@@ -69,9 +68,7 @@ function Listing() {
       >
         <img src={shareIcon} alt="" />
       </div>
-
       {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
-
       <div className="listingDetails">
         <p className="listingName">
           {listing.name} - $
@@ -92,7 +89,6 @@ function Listing() {
             ${listing.regularPrice - listing.discountedPrice} discount
           </p>
         )}
-
         <ul className="listingDetailsList">
           <li>
             {listing.bedrooms > 1
@@ -107,7 +103,6 @@ function Listing() {
           <li>{listing.parking && "Parking Spot"}</li>
           <li>{listing.furnished && "Furnished"}</li>
         </ul>
-
         <p className="listingLocationTitle">Location</p>
         {auth.currentUser?.uid !== listing.userRef && (
           <Link

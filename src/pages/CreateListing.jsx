@@ -15,7 +15,6 @@ import Spinner from "../components/Spinner";
 
 function CreateListing() {
   // eslint-disable-next-line
-  const [geolocationEnabled, setGeolocationEnabled] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: "rent",
@@ -45,8 +44,6 @@ function CreateListing() {
     regularPrice,
     discountedPrice,
     images,
-    latitude,
-    longitude,
   } = formData;
 
   const auth = getAuth();
@@ -85,34 +82,6 @@ function CreateListing() {
       setLoading(false);
       toast.error("Max 6 images");
       return;
-    }
-
-    let geolocation = {};
-    let location;
-
-    if (geolocationEnabled) {
-      const response = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
-      );
-
-      const data = await response.json();
-
-      geolocation.lat = data.results[0]?.geometry.location.lat ?? 0;
-      geolocation.lng = data.results[0]?.geometry.location.lng ?? 0;
-
-      location =
-        data.status === "ZERO_RESULTS"
-          ? undefined
-          : data.results[0]?.formatted_address;
-
-      if (location === undefined || location.includes("undefined")) {
-        setLoading(false);
-        toast.error("Please enter a correct address");
-        return;
-      }
-    } else {
-      geolocation.lat = latitude;
-      geolocation.lng = longitude;
     }
 
     // Store image in firebase
@@ -167,7 +136,7 @@ function CreateListing() {
     const formDataCopy = {
       ...formData,
       imgUrls,
-      geolocation,
+
       timestamp: serverTimestamp(),
     };
 
@@ -218,7 +187,6 @@ function CreateListing() {
       <header>
         <p className="pageHeader">Create a Listing</p>
       </header>
-
       <main>
         <form onSubmit={onSubmit}>
           <label className="formLabel">Sell / Rent</label>
@@ -242,7 +210,6 @@ function CreateListing() {
               Rent
             </button>
           </div>
-
           <label className="formLabel">Name</label>
           <input
             className="formInputName"
@@ -254,7 +221,6 @@ function CreateListing() {
             minLength="10"
             required
           />
-
           <div className="formRooms flex">
             <div>
               <label className="formLabel">Bedrooms</label>
@@ -283,7 +249,6 @@ function CreateListing() {
               />
             </div>
           </div>
-
           <label className="formLabel">Parking spot</label>
           <div className="formButtons">
             <button
@@ -309,7 +274,6 @@ function CreateListing() {
               No
             </button>
           </div>
-
           <label className="formLabel">Furnished</label>
           <div className="formButtons">
             <button
@@ -335,7 +299,6 @@ function CreateListing() {
               No
             </button>
           </div>
-
           <label className="formLabel">Address</label>
           <textarea
             className="formInputAddress"
@@ -345,34 +308,6 @@ function CreateListing() {
             onChange={onMutate}
             required
           />
-
-          {!geolocationEnabled && (
-            <div className="formLatLng flex">
-              <div>
-                <label className="formLabel">Latitude</label>
-                <input
-                  className="formInputSmall"
-                  type="number"
-                  id="latitude"
-                  value={latitude}
-                  onChange={onMutate}
-                  required
-                />
-              </div>
-              <div>
-                <label className="formLabel">Longitude</label>
-                <input
-                  className="formInputSmall"
-                  type="number"
-                  id="longitude"
-                  value={longitude}
-                  onChange={onMutate}
-                  required
-                />
-              </div>
-            </div>
-          )}
-
           <label className="formLabel">Offer</label>
           <div className="formButtons">
             <button
@@ -396,7 +331,6 @@ function CreateListing() {
               No
             </button>
           </div>
-
           <label className="formLabel">Regular Price</label>
           <div className="formPriceDiv">
             <input
@@ -411,7 +345,6 @@ function CreateListing() {
             />
             {type === "rent" && <p className="formPriceText">$ / Month</p>}
           </div>
-
           {offer && (
             <>
               <label className="formLabel">Discounted Price</label>
@@ -427,7 +360,6 @@ function CreateListing() {
               />
             </>
           )}
-
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
             The first image will be the cover (max 6).

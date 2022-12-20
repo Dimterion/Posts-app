@@ -25,7 +25,6 @@ function ForgotPassword() {
       <header>
         <p className="pageHeader">Forgot Password</p>
       </header>
-
       <main>
         <form onSubmit={onSubmit}>
           <input
@@ -39,7 +38,6 @@ function ForgotPassword() {
           <Link className="forgotPasswordLink" to="/sign-in">
             Sign In
           </Link>
-
           <div className="signInBar">
             <div className="signInText">Send Reset Link</div>
             <button className="signInButton">

@@ -113,7 +113,6 @@ function Profile() {
           Logout
         </button>
       </header>
-
       <main>
         <div className="profileDetailsHeader">
           <p className="profileDetailsText">Personal Details</p>
@@ -127,7 +126,6 @@ function Profile() {
             {changeDetails ? "done" : "change"}
           </p>
         </div>
-
         <div className="profileCard">
           <form>
             <input
@@ -148,13 +146,11 @@ function Profile() {
             />
           </form>
         </div>
-
         <Link to="/create-listing" className="createListing">
           <img src={homeIcon} alt="home" />
           <p>Sell or rent your home</p>
           <img src={arrowRight} alt="arrow right" />
         </Link>
-
         {!loading && listings?.length > 0 && (
           <>
             <p className="listingText">Your Listings</p>

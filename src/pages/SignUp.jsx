@@ -65,7 +65,6 @@ function SignUp() {
         <header>
           <p className="pageHeader">Welcome Back!</p>
         </header>
-
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -83,7 +82,6 @@ function SignUp() {
             value={email}
             onChange={onChange}
           />
-
           <div className="passwordInputDiv">
             <input
               type={showPassword ? "text" : "password"}
@@ -93,7 +91,6 @@ function SignUp() {
               value={password}
               onChange={onChange}
             />
-
             <img
               src={visibilityIcon}
               alt="show password"
@@ -101,11 +98,9 @@ function SignUp() {
               onClick={() => setShowPassword((prevState) => !prevState)}
             />
           </div>
-
           <Link to="/forgot-password" className="forgotPasswordLink">
             Forgot Password
           </Link>
-
           <div className="signUpBar">
             <p className="signUpText">Sign Up</p>
             <button className="signUpButton">

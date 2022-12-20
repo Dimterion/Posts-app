@@ -99,7 +99,6 @@ function Offers() {
       <header>
         <p className="pageHeader">Offers</p>
       </header>
-
       {loading ? (
         <Spinner />
       ) : listings && listings.length > 0 ? (
@@ -115,7 +114,6 @@ function Offers() {
               ))}
             </ul>
           </main>
-
           <br />
           <br />
           {lastFetchedListing && (
