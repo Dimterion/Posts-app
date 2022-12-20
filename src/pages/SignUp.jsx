@@ -8,7 +8,7 @@ import {
 } from "firebase/auth";
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
-import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardRightIcon.svg";
+import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 
 function SignUp() {
@@ -18,7 +18,6 @@ function SignUp() {
     email: "",
     password: "",
   });
-
   const { name, email, password } = formData;
 
   const navigate = useNavigate();
@@ -56,7 +55,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      toast.error("Something went wrong with the registration");
+      toast.error("Something went wrong with registration");
     }
   };
 
@@ -66,6 +65,7 @@ function SignUp() {
         <header>
           <p className="pageHeader">Welcome Back!</p>
         </header>
+
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -83,6 +83,7 @@ function SignUp() {
             value={email}
             onChange={onChange}
           />
+
           <div className="passwordInputDiv">
             <input
               type={showPassword ? "text" : "password"}
@@ -92,20 +93,23 @@ function SignUp() {
               value={password}
               onChange={onChange}
             />
+
             <img
               src={visibilityIcon}
-              alt="Show password"
+              alt="show password"
               className="showPassword"
               onClick={() => setShowPassword((prevState) => !prevState)}
             />
           </div>
+
           <Link to="/forgot-password" className="forgotPasswordLink">
             Forgot Password
           </Link>
+
           <div className="signUpBar">
             <p className="signUpText">Sign Up</p>
             <button className="signUpButton">
-              <ArrowRightIcon fill="#fff" width="30px" height="30px" />
+              <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>
           </div>
         </form>
