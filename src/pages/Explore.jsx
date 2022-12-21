@@ -1,33 +1,29 @@
 import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
-import rentCategoryImage from "../assets/jpg/rentCategoryImage.jpg";
-import sellCategoryImage from "../assets/jpg/sellCategoryImage.jpg";
+import fullTime from "../assets/jpg/fullTime.jpg";
+import freelance from "../assets/jpg/freelance.jpg";
 
 function Explore() {
   return (
     <div className="explore">
       <header>
-        <p className="pageHeader">Explore</p>
+        <p className="pageHeader">Programming Offers</p>
       </header>
       <main>
         <Slider />
         <p className="exploreCategoryHeading">Categories</p>
         <div className="exploreCategories">
-          <Link to="/category/rent">
+          <Link to="/category/freelance">
             <img
-              src={rentCategoryImage}
-              alt="rent"
+              src={freelance}
+              alt="freelance"
               className="exploreCategoryImg"
             />
-            <p className="exploreCategoryName">Places for rent</p>
+            <p className="exploreCategoryName">Freelance</p>
           </Link>
-          <Link to="/category/sale">
-            <img
-              src={sellCategoryImage}
-              alt="sell"
-              className="exploreCategoryImg"
-            />
-            <p className="exploreCategoryName">Places for sale</p>
+          <Link to="/category/full-time">
+            <img src={fullTime} alt="sell" className="exploreCategoryImg" />
+            <p className="exploreCategoryName">Full-Time</p>
           </Link>
         </div>
       </main>

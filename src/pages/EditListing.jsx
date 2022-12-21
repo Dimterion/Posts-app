@@ -18,7 +18,7 @@ function EditListing() {
   const [loading, setLoading] = useState(false);
   const [listing, setListing] = useState(false);
   const [formData, setFormData] = useState({
-    type: "rent",
+    type: "freelance",
     name: "",
     bedrooms: 1,
     bathrooms: 1,
@@ -220,25 +220,29 @@ function EditListing() {
       </header>
       <main>
         <form onSubmit={onSubmit}>
-          <label className="formLabel">Sell / Rent</label>
+          <label className="formLabel">Freelance / Full-Time</label>
           <div className="formButtons">
             <button
               type="button"
-              className={type === "sale" ? "formButtonActive" : "formButton"}
+              className={
+                type === "full-time" ? "formButtonActive" : "formButton"
+              }
               id="type"
-              value="sale"
+              value="full-time"
               onClick={onMutate}
             >
               Sell
             </button>
             <button
               type="button"
-              className={type === "rent" ? "formButtonActive" : "formButton"}
+              className={
+                type === "freelance" ? "formButtonActive" : "formButton"
+              }
               id="type"
-              value="rent"
+              value="freelance"
               onClick={onMutate}
             >
-              Rent
+              Freelance
             </button>
           </div>
           <label className="formLabel">Name</label>
@@ -374,7 +378,7 @@ function EditListing() {
               max="750000000"
               required
             />
-            {type === "rent" && <p className="formPriceText">$ / Month</p>}
+            {type === "freelance" && <p className="formPriceText">$ / Month</p>}
           </div>
           {offer && (
             <>

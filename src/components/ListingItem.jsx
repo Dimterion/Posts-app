@@ -29,7 +29,7 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
               : listing.regularPrice
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            {listing.type === "rent" && " / Month"}
+            {listing.type === "freelance" && " / Month"}
           </p>
           <div className="categoryListingInfoDiv">
             <img src={bedIcon} alt="bed" />
