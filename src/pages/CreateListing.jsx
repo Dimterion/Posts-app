@@ -22,8 +22,7 @@ function CreateListing() {
     experience: 1,
     remote: true,
     beginnerFriendly: true,
-    address: "",
-    offer: false,
+    details: "",
     regularPrice: 0,
     discountedPrice: 0,
     images: {},
@@ -37,8 +36,7 @@ function CreateListing() {
     experience,
     remote,
     beginnerFriendly,
-    address,
-    offer,
+    details,
     regularPrice,
     discountedPrice,
     images,
@@ -138,10 +136,9 @@ function CreateListing() {
       timestamp: serverTimestamp(),
     };
 
-    formDataCopy.location = address;
+    formDataCopy.details = details;
     delete formDataCopy.images;
-    delete formDataCopy.address;
-    !formDataCopy.offer && delete formDataCopy.discountedPrice;
+    delete formDataCopy.details;
 
     const docRef = await addDoc(collection(db, "listings"), formDataCopy);
     setLoading(false);
@@ -288,38 +285,15 @@ function CreateListing() {
               No
             </button>
           </div>
-          <label className="formLabel">Address</label>
+          <label className="formLabel">Details</label>
           <textarea
             className="formInputAddress"
             type="text"
-            id="address"
-            value={address}
+            id="details"
+            value={details}
             onChange={onMutate}
             required
           />
-          <label className="formLabel">Offer</label>
-          <div className="formButtons">
-            <button
-              className={offer ? "formButtonActive" : "formButton"}
-              type="button"
-              id="offer"
-              value={true}
-              onClick={onMutate}
-            >
-              Yes
-            </button>
-            <button
-              className={
-                !offer && offer !== null ? "formButtonActive" : "formButton"
-              }
-              type="button"
-              id="offer"
-              value={false}
-              onClick={onMutate}
-            >
-              No
-            </button>
-          </div>
           <label className="formLabel">Regular Price</label>
           <div className="formPriceDiv">
             <input
@@ -335,21 +309,6 @@ function CreateListing() {
             {type === "freelance" && <p className="formPriceText">$ / Month</p>}
             {type === "full-time" && <p className="formPriceText">$</p>}
           </div>
-          {offer && (
-            <>
-              <label className="formLabel">Discounted Price</label>
-              <input
-                className="formInputSmall"
-                type="number"
-                id="discountedPrice"
-                value={discountedPrice}
-                onChange={onMutate}
-                min="50"
-                max="750000000"
-                required={offer}
-              />
-            </>
-          )}
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
             The first image will be the cover (max 2).

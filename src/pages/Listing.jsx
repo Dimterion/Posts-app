@@ -72,23 +72,14 @@ function Listing() {
       <div className="listingDetails">
         <p className="listingName">
           {listing.name} - $
-          {listing.offer
-            ? listing.discountedPrice
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-            : listing.regularPrice
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          {listing.regularPrice
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </p>
-        <p className="listingLocation">{listing.location}</p>
+        <p className="listingLocation">{listing.details}</p>
         <p className="listingType">
           {listing.type === "freelance" ? "Freelance" : "Full-Time"}
         </p>
-        {listing.offer && (
-          <p className="discountPrice">
-            ${listing.regularPrice - listing.discountedPrice} discount
-          </p>
-        )}
         <ul className="listingDetailsList">
           <li>
             {listing.experience > 1
@@ -98,7 +89,8 @@ function Listing() {
           <li>{listing.remote && "Remote"}</li>
           <li>{listing.beginnerFriendly && "Beginner-friendly"}</li>
         </ul>
-        <p className="listingLocationTitle">Location</p>
+        <p className="listingLocationTitle">Details</p>
+        <p>{listing.details}</p>
         {auth.currentUser?.uid !== listing.userRef && (
           <Link
             to={`/contact/${listing.userRef}?listingName=${listing.name}`}

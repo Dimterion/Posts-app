@@ -7,7 +7,7 @@ function Explore() {
   return (
     <div className="explore">
       <header>
-        <p className="pageHeader">Programming Offers</p>
+        <p className="pageHeader">Programming Jobs</p>
       </header>
       <main>
         <Slider />
