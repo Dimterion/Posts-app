@@ -19,10 +19,9 @@ function CreateListing() {
   const [formData, setFormData] = useState({
     type: "freelance",
     name: "",
-    bedrooms: 1,
-    bathrooms: 1,
-    parking: false,
-    furnished: false,
+    experience: 1,
+    remote: true,
+    beginnerFriendly: true,
     address: "",
     offer: false,
     regularPrice: 0,
@@ -35,10 +34,9 @@ function CreateListing() {
   const {
     type,
     name,
-    bedrooms,
-    bathrooms,
-    parking,
-    furnished,
+    experience,
+    remote,
+    beginnerFriendly,
     address,
     offer,
     regularPrice,
@@ -78,9 +76,9 @@ function CreateListing() {
       return;
     }
 
-    if (images.length > 6) {
+    if (images.length > 2) {
       setLoading(false);
-      toast.error("Max 6 images");
+      toast.error("Max 2 images");
       return;
     }
 
@@ -200,7 +198,7 @@ function CreateListing() {
               value="full-time"
               onClick={onMutate}
             >
-              Sell
+              Full-Time
             </button>
             <button
               type="button"
@@ -214,38 +212,25 @@ function CreateListing() {
               Freelance
             </button>
           </div>
-          <label className="formLabel">Name</label>
+          <label className="formLabel">Position</label>
           <input
             className="formInputName"
             type="text"
             id="name"
             value={name}
             onChange={onMutate}
-            maxLength="32"
+            maxLength="30"
             minLength="10"
             required
           />
           <div className="formRooms flex">
             <div>
-              <label className="formLabel">Bedrooms</label>
+              <label className="formLabel">Experience</label>
               <input
                 className="formInputSmall"
                 type="number"
-                id="bedrooms"
-                value={bedrooms}
-                onChange={onMutate}
-                min="1"
-                max="50"
-                required
-              />
-            </div>
-            <div>
-              <label className="formLabel">Bathrooms</label>
-              <input
-                className="formInputSmall"
-                type="number"
-                id="bathrooms"
-                value={bathrooms}
+                id="experience"
+                value={experience}
                 onChange={onMutate}
                 min="1"
                 max="50"
@@ -253,12 +238,12 @@ function CreateListing() {
               />
             </div>
           </div>
-          <label className="formLabel">Parking spot</label>
+          <label className="formLabel">Remote</label>
           <div className="formButtons">
             <button
-              className={parking ? "formButtonActive" : "formButton"}
+              className={remote ? "formButtonActive" : "formButton"}
               type="button"
-              id="parking"
+              id="remote"
               value={true}
               onClick={onMutate}
               min="1"
@@ -268,22 +253,22 @@ function CreateListing() {
             </button>
             <button
               className={
-                !parking && parking !== null ? "formButtonActive" : "formButton"
+                !remote && remote !== null ? "formButtonActive" : "formButton"
               }
               type="button"
-              id="parking"
+              id="remote"
               value={false}
               onClick={onMutate}
             >
               No
             </button>
           </div>
-          <label className="formLabel">Furnished</label>
+          <label className="formLabel">Beginner-friendly</label>
           <div className="formButtons">
             <button
-              className={furnished ? "formButtonActive" : "formButton"}
+              className={beginnerFriendly ? "formButtonActive" : "formButton"}
               type="button"
-              id="furnished"
+              id="beginnerFriendly"
               value={true}
               onClick={onMutate}
             >
@@ -291,12 +276,12 @@ function CreateListing() {
             </button>
             <button
               className={
-                !furnished && furnished !== null
+                !beginnerFriendly && beginnerFriendly !== null
                   ? "formButtonActive"
                   : "formButton"
               }
               type="button"
-              id="furnished"
+              id="beginnerFriendly"
               value={false}
               onClick={onMutate}
             >
@@ -348,6 +333,7 @@ function CreateListing() {
               required
             />
             {type === "freelance" && <p className="formPriceText">$ / Month</p>}
+            {type === "full-time" && <p className="formPriceText">$</p>}
           </div>
           {offer && (
             <>
@@ -366,14 +352,14 @@ function CreateListing() {
           )}
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
-            The first image will be the cover (max 6).
+            The first image will be the cover (max 2).
           </p>
           <input
             className="formInputFile"
             type="file"
             id="images"
             onChange={onMutate}
-            max="6"
+            max="2"
             accept=".jpg,.png,.jpeg"
             multiple
             required

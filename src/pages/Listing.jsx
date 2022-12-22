@@ -91,17 +91,12 @@ function Listing() {
         )}
         <ul className="listingDetailsList">
           <li>
-            {listing.bedrooms > 1
-              ? `${listing.bedrooms} Bedrooms`
-              : "1 Bedroom"}
+            {listing.experience > 1
+              ? `Experience: ${listing.experience} years`
+              : "Experience: 1 year"}
           </li>
-          <li>
-            {listing.bathrooms > 1
-              ? `${listing.bathrooms} Bathrooms`
-              : "1 Bathroom"}
-          </li>
-          <li>{listing.parking && "Parking Spot"}</li>
-          <li>{listing.furnished && "Furnished"}</li>
+          <li>{listing.remote && "Remote"}</li>
+          <li>{listing.beginnerFriendly && "Beginner-friendly"}</li>
         </ul>
         <p className="listingLocationTitle">Location</p>
         {auth.currentUser?.uid !== listing.userRef && (

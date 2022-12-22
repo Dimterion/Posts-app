@@ -740,7 +740,7 @@ button {
 .formInputSmall,
 .formInputFile,
 .formButtonActive {
-  padding: 0.9rem 3rem;
+  padding: 0.9rem 2rem;
   background-color: #ffffff;
   font-weight: 600;
   border-radius: 1rem;

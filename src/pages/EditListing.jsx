@@ -20,10 +20,9 @@ function EditListing() {
   const [formData, setFormData] = useState({
     type: "freelance",
     name: "",
-    bedrooms: 1,
-    bathrooms: 1,
-    parking: false,
-    furnished: false,
+    experience: 1,
+    remote: false,
+    beginnerFriendly: false,
     address: "",
     offer: false,
     regularPrice: 0,
@@ -36,10 +35,9 @@ function EditListing() {
   const {
     type,
     name,
-    bedrooms,
-    bathrooms,
-    parking,
-    furnished,
+    experience,
+    remote,
+    beginnerFriendly,
     address,
     offer,
     regularPrice,
@@ -231,7 +229,7 @@ function EditListing() {
               value="full-time"
               onClick={onMutate}
             >
-              Sell
+              Full-Time
             </button>
             <button
               type="button"
@@ -252,31 +250,18 @@ function EditListing() {
             id="name"
             value={name}
             onChange={onMutate}
-            maxLength="32"
+            maxLength="30"
             minLength="10"
             required
           />
           <div className="formRooms flex">
             <div>
-              <label className="formLabel">Bedrooms</label>
+              <label className="formLabel">Experience</label>
               <input
                 className="formInputSmall"
                 type="number"
-                id="bedrooms"
-                value={bedrooms}
-                onChange={onMutate}
-                min="1"
-                max="50"
-                required
-              />
-            </div>
-            <div>
-              <label className="formLabel">Bathrooms</label>
-              <input
-                className="formInputSmall"
-                type="number"
-                id="bathrooms"
-                value={bathrooms}
+                id="experience"
+                value={experience}
                 onChange={onMutate}
                 min="1"
                 max="50"
@@ -284,12 +269,12 @@ function EditListing() {
               />
             </div>
           </div>
-          <label className="formLabel">Parking spot</label>
+          <label className="formLabel"> Remote</label>
           <div className="formButtons">
             <button
-              className={parking ? "formButtonActive" : "formButton"}
+              className={remote ? "formButtonActive" : "formButton"}
               type="button"
-              id="parking"
+              id="remote"
               value={true}
               onClick={onMutate}
               min="1"
@@ -299,22 +284,22 @@ function EditListing() {
             </button>
             <button
               className={
-                !parking && parking !== null ? "formButtonActive" : "formButton"
+                !remote && remote !== null ? "formButtonActive" : "formButton"
               }
               type="button"
-              id="parking"
+              id="remote"
               value={false}
               onClick={onMutate}
             >
               No
             </button>
           </div>
-          <label className="formLabel">Furnished</label>
+          <label className="formLabel">Beginner-friendly</label>
           <div className="formButtons">
             <button
-              className={furnished ? "formButtonActive" : "formButton"}
+              className={beginnerFriendly ? "formButtonActive" : "formButton"}
               type="button"
-              id="furnished"
+              id="beginnerFriendly"
               value={true}
               onClick={onMutate}
             >
@@ -322,12 +307,12 @@ function EditListing() {
             </button>
             <button
               className={
-                !furnished && furnished !== null
+                !beginnerFriendly && beginnerFriendly !== null
                   ? "formButtonActive"
                   : "formButton"
               }
               type="button"
-              id="furnished"
+              id="beginnerFriendly"
               value={false}
               onClick={onMutate}
             >
@@ -379,6 +364,7 @@ function EditListing() {
               required
             />
             {type === "freelance" && <p className="formPriceText">$ / Month</p>}
+            {type === "full-time" && <p className="formPriceText">$</p>}
           </div>
           {offer && (
             <>
