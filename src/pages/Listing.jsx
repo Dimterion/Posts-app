@@ -70,12 +70,17 @@ function Listing() {
       </div>
       {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
       <div className="listingDetails">
-        <p className="listingName">
-          {listing.name} - $
-          {listing.regularPrice
-            .toString()
-            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </p>
+        {listing.regularPrice > 0 ? (
+          <p className="listingName">
+            {listing.name} - $
+            {listing.regularPrice
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+            / Month
+          </p>
+        ) : (
+          <p className="listingName">{listing.name}</p>
+        )}
         <p className="listingLocation">{listing.details}</p>
         <p className="listingType">
           {listing.type === "freelance" ? "Freelance" : "Full-Time"}

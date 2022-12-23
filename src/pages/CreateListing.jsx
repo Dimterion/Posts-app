@@ -24,7 +24,6 @@ function CreateListing() {
     beginnerFriendly: true,
     details: "",
     regularPrice: 0,
-    discountedPrice: 0,
     images: {},
     latitude: 0,
     longitude: 0,
@@ -38,7 +37,6 @@ function CreateListing() {
     beginnerFriendly,
     details,
     regularPrice,
-    discountedPrice,
     images,
   } = formData;
 
@@ -67,12 +65,6 @@ function CreateListing() {
     e.preventDefault();
 
     setLoading(true);
-
-    if (discountedPrice >= regularPrice) {
-      setLoading(false);
-      toast.error("Discounted price needs to be less than regular price");
-      return;
-    }
 
     if (images.length > 2) {
       setLoading(false);
@@ -229,8 +221,8 @@ function CreateListing() {
                 id="experience"
                 value={experience}
                 onChange={onMutate}
-                min="1"
-                max="50"
+                min="0"
+                max="100"
                 required
               />
             </div>
@@ -243,8 +235,6 @@ function CreateListing() {
               id="remote"
               value={true}
               onClick={onMutate}
-              min="1"
-              max="50"
             >
               Yes
             </button>
@@ -294,7 +284,7 @@ function CreateListing() {
             onChange={onMutate}
             required
           />
-          <label className="formLabel">Regular Price</label>
+          <label className="formLabel">Average Salary</label>
           <div className="formPriceDiv">
             <input
               className="formInputSmall"
@@ -302,8 +292,8 @@ function CreateListing() {
               id="regularPrice"
               value={regularPrice}
               onChange={onMutate}
-              min="50"
-              max="750000000"
+              min="0"
+              max="5000000"
               required
             />
             {type === "freelance" && <p className="formPriceText">$ / Month</p>}
