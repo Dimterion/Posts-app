@@ -28,6 +28,7 @@ function EditListing() {
     images: {},
     latitude: 0,
     longitude: 0,
+    link: "",
   });
 
   const {
@@ -39,6 +40,7 @@ function EditListing() {
     details,
     regularPrice,
     images,
+    link,
   } = formData;
 
   const auth = getAuth();
@@ -232,7 +234,7 @@ function EditListing() {
               Freelance
             </button>
           </div>
-          <label className="formLabel">Name</label>
+          <label className="formLabel">Position</label>
           <input
             className="formInputName"
             type="text"
@@ -330,9 +332,20 @@ function EditListing() {
             {type === "freelance" && <p className="formPriceText">$ / Month</p>}
             {type === "full-time" && <p className="formPriceText">$</p>}
           </div>
+          <label className="formLabel">Link to the application page</label>
+          <input
+            className="formInputName"
+            type="text"
+            id="link"
+            value={link}
+            onChange={onMutate}
+            maxLength="100"
+            minLength="5"
+            required
+          />
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
-            The first image will be the cover (max 6).
+            The first image will be the cover (max 2).
           </p>
           <input
             className="formInputFile"

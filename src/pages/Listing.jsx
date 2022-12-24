@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { getDoc, doc } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
 import { db } from "../firebase.config";
 import Spinner from "../components/Spinner";
 import shareIcon from "../assets/svg/shareIcon.svg";
@@ -18,7 +17,6 @@ function Listing() {
 
   const navigate = useNavigate();
   const params = useParams();
-  const auth = getAuth();
 
   useEffect(() => {
     const fetchListing = async () => {
@@ -96,14 +94,9 @@ function Listing() {
         </ul>
         <p className="listingLocationTitle">Details</p>
         <p>{listing.details}</p>
-        {auth.currentUser?.uid !== listing.userRef && (
-          <Link
-            to={`/contact/${listing.userRef}?listingName=${listing.name}`}
-            className="primaryButton"
-          >
-            Contact Landlord
-          </Link>
-        )}
+        <a href={`${listing.link}`} className="primaryButton">
+          Link to the position
+        </a>
       </div>
     </main>
   );

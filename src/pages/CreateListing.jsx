@@ -19,6 +19,7 @@ function CreateListing() {
   const [formData, setFormData] = useState({
     type: "freelance",
     name: "",
+    link: "",
     experience: 1,
     remote: true,
     beginnerFriendly: true,
@@ -32,6 +33,7 @@ function CreateListing() {
   const {
     type,
     name,
+    link,
     experience,
     remote,
     beginnerFriendly,
@@ -299,6 +301,17 @@ function CreateListing() {
             {type === "freelance" && <p className="formPriceText">$ / Month</p>}
             {type === "full-time" && <p className="formPriceText">$</p>}
           </div>
+          <label className="formLabel">Link to the application page</label>
+          <input
+            className="formInputName"
+            type="text"
+            id="link"
+            value={link}
+            onChange={onMutate}
+            maxLength="100"
+            minLength="5"
+            required
+          />
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
             The first image will be the cover (max 2).
