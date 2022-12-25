@@ -42,6 +42,8 @@ function SignIn() {
     }
   };
 
+  document.title = "Posts App";
+
   return (
     <>
       <div className="pageContainer">

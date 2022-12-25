@@ -97,6 +97,8 @@ function Category() {
     }
   };
 
+  document.title = "Posts App";
+
   return (
     <div className="category">
       <header>

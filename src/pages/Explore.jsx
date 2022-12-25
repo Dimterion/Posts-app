@@ -4,6 +4,8 @@ import fullTime from "../assets/jpg/fullTime.jpg";
 import freelance from "../assets/jpg/freelance.jpg";
 
 function Explore() {
+  document.title = "Posts App";
+
   return (
     <div className="explore">
       <header>

@@ -20,6 +20,8 @@ function ForgotPassword() {
     }
   };
 
+  document.title = "Posts App";
+
   return (
     <div className="pageContainer">
       <header>

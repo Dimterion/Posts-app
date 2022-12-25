@@ -169,6 +169,8 @@ function CreateListing() {
     return <Spinner />;
   }
 
+  document.title = "Posts App";
+
   return (
     <div className="profile">
       <header>

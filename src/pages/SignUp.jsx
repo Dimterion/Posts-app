@@ -59,6 +59,8 @@ function SignUp() {
     }
   };
 
+  document.title = "Posts App";
+
   return (
     <>
       <div className="pageContainer">

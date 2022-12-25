@@ -105,6 +105,8 @@ function Profile() {
 
   const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`);
 
+  document.title = "Posts App";
+
   return (
     <div className="profile">
       <header className="profileHeader">

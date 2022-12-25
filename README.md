@@ -1,6 +1,6 @@
 # Posts App (Work In Progress)
 
-An application to create listings for the availabale programming jobs.
+An application to create listings for the available programming jobs.
 
 ## Details
 
