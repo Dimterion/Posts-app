@@ -26,8 +26,6 @@ function EditListing() {
     details: "",
     regularPrice: 0,
     images: {},
-    latitude: 0,
-    longitude: 0,
     link: "",
   });
 

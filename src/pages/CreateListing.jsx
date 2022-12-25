@@ -26,8 +26,6 @@ function CreateListing() {
     details: "",
     regularPrice: 0,
     images: {},
-    latitude: 0,
-    longitude: 0,
   });
 
   const {
