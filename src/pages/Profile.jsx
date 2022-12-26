@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
 import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
-import homeIcon from "../assets/svg/homeIcon.svg";
+import checkIcon from "../assets/svg/checkIcon.svg";
 
 function Profile() {
   const auth = getAuth();
@@ -149,7 +149,7 @@ function Profile() {
           </form>
         </div>
         <Link to="/create-listing" className="createListing">
-          <img src={homeIcon} alt="home" />
+          <img src={checkIcon} alt="home" />
           <p>Post full-time or freelance job offers</p>
           <img src={arrowRight} alt="arrow right" />
         </Link>
