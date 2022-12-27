@@ -17,7 +17,7 @@ function Slider() {
   useEffect(() => {
     const fetchListings = async () => {
       const listingsRef = collection(db, "listings");
-      const q = query(listingsRef, orderBy("timestamp", "desc"), limit(5));
+      const q = query(listingsRef, orderBy("timestamp", "desc"), limit(2));
       const querySnap = await getDocs(q);
 
       let listings = [];
@@ -63,8 +63,8 @@ function Slider() {
               >
                 <p className="swiperSlideText">{data.name}</p>
                 <p className="swiperSlidePrice">
-                  ${data.discountedPrice ?? data.regularPrice}{" "}
-                  {data.type === "freelance" && "/ month"}
+                  ${data.regularPrice}
+                  {" / month"}
                 </p>
               </div>
             </SwiperSlide>
