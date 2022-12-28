@@ -144,6 +144,7 @@ button {
 .pageHeader {
   font-size: 2rem;
   font-weight: 800;
+  margin: 15px auto;
 }
 
 .navbar {
@@ -325,10 +326,11 @@ button {
 .exploreHeading,
 .exploreCategoryHeading {
   font-weight: 700;
+  margin: 5px auto;
 }
 
 .exploreCategoryHeading {
-  margin-top: 3rem;
+  margin: 15px auto;
 }
 
 .swiper {
@@ -392,7 +394,7 @@ span.swiper-pagination-bullet {
   min-height: 115px;
   height: 15vw;
   width: 100%;
-  border-radius: 1.5rem;
+  border-radius: 5px;
   object-fit: cover;
   margin: 0 auto;
 }
