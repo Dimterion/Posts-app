@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,8 +9,8 @@ html::-webkit-scrollbar {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #f2f4f8;
+  font-family: "Inter", sans-serif;
+  background-color: #adb5bd;
   margin: 0;
   box-sizing: border-box;
 }
@@ -18,7 +18,7 @@ body {
 a {
   text-decoration: none;
   display: block;
-  color: #000000;
+  color: #212529;
 }
 
 button {
@@ -31,14 +31,14 @@ button {
 .emailInput,
 .nameInput,
 .textarea {
-  box-shadow: rgba(0, 0, 0, 0.11);
+  box-shadow: rgba(0, 0, 0, 0.1);
   border: none;
-  background: #ffffff;
-  border-radius: 3rem;
+  background: #6c757d;
+  border-radius: 5px;
   height: 3rem;
   width: 100%;
   outline: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 0 3rem;
   font-size: 1rem;
 }
@@ -61,17 +61,18 @@ button {
 
 .primaryButton {
   cursor: pointer;
-  background: #00cc66;
-  border-radius: 1rem;
+  background: #212529;
+  border-radius: 5px;
   padding: 0.85rem 2rem;
-  color: #ffffff;
+  color: #dee2e6;
   font-weight: 600;
   font-size: 1.25rem;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .removeIcon {
@@ -127,7 +128,7 @@ button {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #00cc66 transparent #00cc66 transparent;
+  border-color: #212529 transparent #212529 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
@@ -153,7 +154,7 @@ button {
   bottom: 0;
   right: 0;
   height: 85px;
-  background-color: #ffffff;
+  background-color: #6c757d;
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -226,7 +227,7 @@ button {
 
 .forgotPasswordLink {
   cursor: pointer;
-  color: #00cc66;
+  color: #212529;
   font-weight: 600;
   text-align: right;
 }
@@ -267,7 +268,7 @@ button {
   align-items: center;
   width: 3rem;
   height: 3rem;
-  background-color: #00cc66;
+  background-color: #212529;
   border-radius: 50%;
 }
 
@@ -305,7 +306,7 @@ button {
 
 .registerLink {
   margin-top: 4rem;
-  color: #00cc66;
+  color: #212529;
   font-weight: 600;
   text-align: center;
   margin-bottom: 3rem;
@@ -371,8 +372,8 @@ span.swiper-pagination-bullet {
 .swiperSlidePrice {
   color: #000000;
   position: relative;
-  top: 100px;
-  left: 10px;
+  top: 15vh;
+  left: 1vw;
   font-weight: 600;
   width: 170px;
   text-align: center;
@@ -465,7 +466,7 @@ span.swiper-pagination-bullet {
   margin-top: 0.5rem;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #00cc66;
+  color: #212529;
   margin-bottom: 0;
   display: flex;
   align-items: center;
@@ -538,7 +539,7 @@ span.swiper-pagination-bullet {
 
 .listingType {
   padding: 0.25rem 0.5rem;
-  background-color: #00cc66;
+  background-color: #212529;
   color: #ffffff;
   border-radius: 2rem;
   display: inline;
@@ -624,11 +625,11 @@ span.swiper-pagination-bullet {
 
 .logOut {
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #00cc66;
+  background-color: #212529;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
 }
@@ -646,7 +647,7 @@ span.swiper-pagination-bullet {
 .changePersonalDetails {
   cursor: pointer;
   font-weight: 600;
-  color: #00cc66;
+  color: #212529;
 }
 
 .profileCard {
@@ -744,7 +745,7 @@ span.swiper-pagination-bullet {
 }
 
 .formButtonActive {
-  background-color: #00cc66;
+  background-color: #212529;
   color: #ffffff;
 }
 
@@ -759,7 +760,7 @@ span.swiper-pagination-bullet {
 .formInputFile {
   border: none;
   outline: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .formInputSmall,
@@ -801,7 +802,7 @@ span.swiper-pagination-bullet {
 }
 
 .formInputFile::-webkit-file-upload-button {
-  background-color: #00cc66;
+  background-color: #212529;
   border: none;
   color: #ffffff;
   font-weight: 600;
