@@ -139,9 +139,9 @@ button {
 }
 
 .pageHeader {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
-  margin: 15px auto;
+  margin: 5px auto 15px;
 }
 
 .navbar {
@@ -372,7 +372,7 @@ span.swiper-pagination-bullet {
   position: relative;
   left: 1vw;
   font-weight: 600;
-  width: 170px;
+  width: 165px;
   text-align: center;
   background-color: #ffffff;
   padding: 0.25rem 0.5rem;
@@ -381,11 +381,11 @@ span.swiper-pagination-bullet {
 
 .exploreCategories {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .exploreCategories a {
-  width: 48%;
+  width: 45%;
 }
 
 .exploreCategoryImg {
@@ -400,6 +400,7 @@ span.swiper-pagination-bullet {
 .exploreCategoryName {
   font-weight: 500;
   text-align: left;
+  margin: 5px auto;
 }
 
 .category {
