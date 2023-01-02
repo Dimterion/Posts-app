@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
 
+:root {
+  --primaryBackground: #adb5bd;
+  --secondaryBackground: #ced4da;
+  --link: #212529;
+  --buttonColor: #dee2e6;
+  --buttonBackground: #212529;
+  --fieldBackground: #6c757d;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +19,7 @@ html::-webkit-scrollbar {
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #adb5bd;
+  background-color: var(--primaryBackground);
   margin: 0;
   box-sizing: border-box;
 }
@@ -18,7 +27,7 @@ body {
 a {
   text-decoration: none;
   display: block;
-  color: #212529;
+  color: var(--link);
 }
 
 button {
@@ -33,7 +42,7 @@ button {
 .textarea {
   box-shadow: rgba(0, 0, 0, 0.1);
   border: none;
-  background: #6c757d;
+  background: var(--fieldBackground);
   border-radius: 5px;
   height: 3rem;
   width: 100%;
@@ -61,10 +70,10 @@ button {
 
 .primaryButton {
   cursor: pointer;
-  background: #212529;
+  background: var(--buttonBackground);
   border-radius: 5px;
   padding: 0.85rem 2rem;
-  color: #dee2e6;
+  color: var(--buttonColor);
   font-weight: 600;
   font-size: 1.25rem;
   max-width: 250px;
@@ -110,7 +119,7 @@ button {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5000;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,8 +159,8 @@ button {
   bottom: 0;
   right: 0;
   height: 85px;
-  background-color: #ced4da;
-  z-index: 1000;
+  background-color: var(--secondaryBackground);
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,13 +201,13 @@ button {
 
 .nameInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/badgeIcon.svg") #ffffff 1.5% center no-repeat;
+  background: url("./assets/svg/badgeIcon.svg") #fff 1.5% center no-repeat;
   background-size: 25px;
 }
 
 .emailInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/personIcon.svg") #ffffff 1.5% center no-repeat;
+  background: url("./assets/svg/personIcon.svg") #fff 1.5% center no-repeat;
   background-size: 25px;
 }
 
@@ -208,7 +217,7 @@ button {
 
 .passwordInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/lockIcon.svg") #ffffff 1.5% center no-repeat;
+  background: url("./assets/svg/lockIcon.svg") #fff 1.5% center no-repeat;
   background-size: 25px;
 }
 
@@ -223,7 +232,7 @@ button {
 
 .forgotPasswordLink {
   cursor: pointer;
-  color: #212529;
+  color: var(--link);
   font-weight: 600;
   text-align: right;
 }
@@ -264,7 +273,7 @@ button {
   align-items: center;
   width: 3rem;
   height: 3rem;
-  background-color: #212529;
+  background-color: var(--buttonBackground);
   border-radius: 50%;
 }
 
@@ -275,34 +284,9 @@ button {
   }
 }
 
-.socialLogin {
-  margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.socialIconDiv {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75rem;
-  margin: 1.5rem;
-  width: 3rem;
-  height: 3rem;
-  background-color: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-}
-
-.socialIconImg {
-  width: 100%;
-}
-
 .registerLink {
   margin-top: 4rem;
-  color: #212529;
+  color: var(--link);
   font-weight: 600;
   text-align: center;
   margin-bottom: 3rem;
@@ -336,14 +320,14 @@ button {
 }
 
 span.swiper-pagination-bullet {
-  background-color: #000000;
+  background-color: #000;
   opacity: 1;
   width: 15px;
   height: 15px;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #ffffff !important;
+  background-color: #fff !important;
   opacity: 1;
 }
 
@@ -359,7 +343,7 @@ span.swiper-pagination-bullet {
 }
 
 .swiperSlideText {
-  color: #ffffff;
+  color: #fff;
   position: relative;
   font-weight: 600;
   background-color: rgba(0, 0, 0, 0.5);
@@ -368,13 +352,13 @@ span.swiper-pagination-bullet {
 }
 
 .swiperSlidePrice {
-  color: #000000;
+  color: #000;
   position: relative;
   left: 1vw;
   font-weight: 600;
   width: 165px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
 }
@@ -488,7 +472,7 @@ span.swiper-pagination-bullet {
   margin: 0 auto;
   text-align: center;
   padding: 0.25rem 0.5rem;
-  background-color: #000000;
+  background-color: #000;
   color: #e9ecef;
   font-weight: 600;
   border-radius: 5px;
@@ -510,7 +494,7 @@ span.swiper-pagination-bullet {
   top: 3%;
   right: 5%;
   z-index: 2;
-  background-color: #ffffff;
+  background-color: var(--secondaryBackground);
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
@@ -530,20 +514,10 @@ span.swiper-pagination-bullet {
   font-weight: 600;
 }
 
-.discountPrice {
-  padding: 0.25rem 0.5rem;
-  background-color: #000000;
-  color: #ffffff;
-  border-radius: 1rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  display: inline;
-}
-
 .listingType {
   padding: 0.25rem 0.5rem;
   background-color: #212529;
-  color: #ffffff;
+  color: #fff;
   border-radius: 2rem;
   display: inline;
   font-weight: 600;
@@ -573,47 +547,10 @@ span.swiper-pagination-bullet {
   top: 9%;
   right: 5%;
   z-index: 2;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   font-weight: 600;
-}
-
-.contactListingName {
-  margin-top: -1rem;
-  margin-bottom: 0;
-  font-weight: 600;
-}
-
-.contactListingLocation {
-  margin-top: 0.25rem;
-  font-weight: 600;
-}
-
-.contactLandlord {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-}
-
-.landlordName {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.messageForm {
-  margin-top: 0.5rem;
-}
-
-.messageDiv {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4rem;
-}
-
-.messageLabel {
-  margin-bottom: 0.5rem;
 }
 
 .profile {
@@ -631,8 +568,8 @@ span.swiper-pagination-bullet {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #212529;
+  color: #fff;
+  background-color: var(--buttonBackground);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
 }
@@ -654,7 +591,7 @@ span.swiper-pagination-bullet {
 }
 
 .profileCard {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.2);
@@ -698,7 +635,7 @@ span.swiper-pagination-bullet {
 }
 
 .createListing {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 1rem;
   padding: 0.25rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.2);
@@ -748,7 +685,7 @@ span.swiper-pagination-bullet {
 }
 
 .formButtonActive {
-  background-color: #212529;
+  background-color: var(--buttonBackground);
   color: #e9ecef;
 }
 
@@ -805,7 +742,7 @@ span.swiper-pagination-bullet {
 }
 
 .formInputFile::-webkit-file-upload-button {
-  background-color: #212529;
+  background-color: var(--buttonBackground);
   border: none;
   color: #e9ecef;
   font-weight: 600;
