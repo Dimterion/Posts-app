@@ -327,7 +327,7 @@ function CreateListing() {
             required
           />
           <button type="submit" className="primaryButton createListingButton">
-            Create Listing
+            Add Job Offer
           </button>
         </form>
       </main>

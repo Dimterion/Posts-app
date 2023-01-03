@@ -125,7 +125,7 @@ function Profile() {
               setChangeDetails((prevState) => !prevState);
             }}
           >
-            {changeDetails ? "done" : "change"}
+            {changeDetails ? "done" : "Change"}
           </p>
         </div>
         <div className="profileCard">
@@ -155,7 +155,7 @@ function Profile() {
         </Link>
         {!loading && listings?.length > 0 && (
           <>
-            <p className="listingText">Your Listings</p>
+            <p className="listingText">Posted Job Offers</p>
             <ul className="listingsList">
               {listings.map((listing) => (
                 <ListingItem
