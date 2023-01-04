@@ -7,6 +7,8 @@
   --buttonColor: #dee2e6;
   --buttonBackground: #212529;
   --fieldBackground: #6c757d;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --spinner: #212529;
 }
 
 * {
@@ -40,7 +42,7 @@ button {
 .emailInput,
 .nameInput,
 .textarea {
-  box-shadow: rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 2px var(--shadow);
   border: none;
   background: var(--fieldBackground);
   border-radius: 5px;
@@ -124,7 +126,6 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
   display: flex;
   justify-content: center;
@@ -139,7 +140,7 @@ button {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #212529 transparent #212529 transparent;
+  border-color: var(--spinner) transparent var(--spinner) transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
@@ -334,7 +335,6 @@ span.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
-  opacity: 1;
 }
 
 .swiperSlideDiv {
@@ -455,7 +455,7 @@ span.swiper-pagination-bullet {
   margin-top: 0.5rem;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #212529;
+  color: var(--link);
   margin-bottom: 0;
   display: flex;
   align-items: center;
@@ -479,7 +479,7 @@ span.swiper-pagination-bullet {
   text-align: center;
   padding: 0.25rem 0.5rem;
   background-color: #000;
-  color: #e9ecef;
+  color: var(--secondaryBackground);
   font-weight: 600;
   border-radius: 5px;
   opacity: 0.7;
@@ -528,8 +528,8 @@ span.swiper-pagination-bullet {
 
 .listingType {
   padding: 0.25rem 0.5rem;
-  background-color: #212529;
-  color: #fff;
+  background-color: var(--buttonBackground);
+  color: var(--buttonColor);
   border-radius: 2rem;
   display: inline;
   font-weight: 600;
@@ -559,7 +559,7 @@ span.swiper-pagination-bullet {
   top: 9%;
   right: 5%;
   z-index: 2;
-  background-color: #fff;
+  background-color: var(--secondaryBackground);
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   font-weight: 600;
@@ -580,7 +580,7 @@ span.swiper-pagination-bullet {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--buttonColor);
   background-color: var(--buttonBackground);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
@@ -606,7 +606,7 @@ span.swiper-pagination-bullet {
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px var(--shadow);
   max-width: 500px;
 }
 
@@ -628,7 +628,9 @@ span.swiper-pagination-bullet {
 }
 
 .profileNameActive {
-  background-color: rgba(44, 44, 44, 0.1);
+  background-color: var(--secondaryBackground);
+  text-indent: 5px;
+  border-radius: 5px;
 }
 
 .profileEmail,
@@ -639,18 +641,22 @@ span.swiper-pagination-bullet {
 }
 
 .profileEmailActive {
-  background-color: rgba(44, 44, 44, 0.1);
+  background-color: var(--secondaryBackground);
+  text-indent: 5px;
+  border-radius: 5px;
 }
 
 .profileAddressActive {
-  background-color: rgba(44, 44, 44, 0.1);
+  background-color: var(--secondaryBackground);
+  text-indent: 5px;
+  border-radius: 5px;
 }
 
 .createListing {
   background-color: #fff;
   border-radius: 1rem;
   padding: 0.25rem 1rem;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px var(--shadow);
   margin-top: 2rem;
   font-weight: 600;
   max-width: 500px;
@@ -686,7 +692,7 @@ span.swiper-pagination-bullet {
 .formInputFile,
 .formButtonActive {
   padding: 0.5rem 1rem;
-  background-color: #e9ecef;
+  background-color: #fff;
   font-weight: 600;
   border-radius: 5px;
   font-size: 1rem;
@@ -698,7 +704,7 @@ span.swiper-pagination-bullet {
 
 .formButtonActive {
   background-color: var(--buttonBackground);
-  color: #e9ecef;
+  color: var(--buttonColor);
 }
 
 .flex {
@@ -756,7 +762,7 @@ span.swiper-pagination-bullet {
 .formInputFile::-webkit-file-upload-button {
   background-color: var(--buttonBackground);
   border: none;
-  color: #e9ecef;
+  color: var(--buttonColor);
   font-weight: 600;
   padding: 0.5rem 0.75rem;
   border-radius: 5px;
