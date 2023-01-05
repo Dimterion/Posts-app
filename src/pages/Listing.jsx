@@ -93,7 +93,7 @@ function Listing() {
         <p className="listingLocationTitle">Details</p>
         <p>{listing.details}</p>
         <a href={`${listing.link}`} className="primaryButton">
-          Link to the position
+          Link to the offer
         </a>
       </div>
     </main>
