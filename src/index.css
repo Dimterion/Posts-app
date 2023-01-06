@@ -42,7 +42,7 @@ button {
 .emailInput,
 .nameInput,
 .textarea {
-  box-shadow: 2px 2px 2px var(--shadow);
+  box-shadow: 5px 5px 5px var(--shadow);
   border: none;
   background: var(--fieldBackground);
   border-radius: 5px;
@@ -88,7 +88,7 @@ button {
 }
 
 .primaryButton:hover {
-  box-shadow: 2px 2px 2px var(--buttonColor);
+  box-shadow: 5px 5px 5px var(--shadow);
   transition: 0.5s;
 }
 
@@ -488,7 +488,7 @@ span.swiper-pagination-bullet {
 }
 
 .loadMore:hover {
-  box-shadow: 2px 2px 2px var(--buttonColor);
+  box-shadow: 5px 5px 5px var(--shadow);
   transition: 0.5s;
 }
 
@@ -586,6 +586,10 @@ span.swiper-pagination-bullet {
   border-radius: 1rem;
 }
 
+.logOut:hover {
+  box-shadow: 5px 5px 5px var(--shadow);
+}
+
 .profileDetailsHeader {
   display: flex;
   justify-content: space-between;
@@ -606,7 +610,7 @@ span.swiper-pagination-bullet {
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 2px 2px 2px var(--shadow);
+  box-shadow: 5px 5px 5px var(--shadow);
   max-width: 500px;
 }
 
@@ -656,7 +660,7 @@ span.swiper-pagination-bullet {
   background-color: #fff;
   border-radius: 1rem;
   padding: 0.25rem 1rem;
-  box-shadow: 2px 2px 2px var(--shadow);
+  box-shadow: 5px 5px 5px var(--shadow);
   margin-top: 2rem;
   font-weight: 600;
   max-width: 500px;
