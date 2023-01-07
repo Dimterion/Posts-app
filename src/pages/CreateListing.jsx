@@ -299,7 +299,7 @@ function CreateListing() {
               required
             />
             {type === "freelance" && <p className="formPriceText">$ / Month</p>}
-            {type === "full-time" && <p className="formPriceText">$</p>}
+            {type === "full-time" && <p className="formPriceText">$ / Month</p>}
           </div>
           <label className="formLabel">Link to the application page</label>
           <input

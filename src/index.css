@@ -593,7 +593,7 @@ span.swiper-pagination-bullet {
 .profileDetailsHeader {
   display: flex;
   justify-content: space-between;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .profileDetailsText {
@@ -606,12 +606,16 @@ span.swiper-pagination-bullet {
   color: #212529;
 }
 
+.changePersonalDetails:hover {
+  text-shadow: 2px 2px 2px var(--shadow);
+}
+
 .profileCard {
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 5px 5px 5px var(--shadow);
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .profileDetails {
@@ -629,6 +633,7 @@ span.swiper-pagination-bullet {
   margin: 0.3rem 0;
   font-weight: 600;
   width: 100%;
+  padding: 5px 0;
 }
 
 .profileNameActive {
@@ -663,10 +668,14 @@ span.swiper-pagination-bullet {
   box-shadow: 5px 5px 5px var(--shadow);
   margin-top: 2rem;
   font-weight: 600;
-  max-width: 500px;
+  max-width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.createListing:hover {
+  opacity: 0.9;
 }
 
 .listingText {
@@ -686,6 +695,11 @@ span.swiper-pagination-bullet {
 
 .formButtons {
   display: flex;
+}
+
+.formButton,
+.formButtonActive {
+  cursor: pointer;
 }
 
 .formButton,
