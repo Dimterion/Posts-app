@@ -157,7 +157,7 @@ button {
 .pageHeader {
   font-size: 2.25rem;
   font-weight: 800;
-  margin: 5px auto 15px;
+  margin: 5px auto 25px;
 }
 
 .navbar {
@@ -314,6 +314,7 @@ button {
 .exploreHeading,
 .exploreCategoryHeading {
   font-weight: 700;
+  font-size: 1.25rem;
   margin: 5px auto;
 }
 
@@ -388,9 +389,14 @@ span.swiper-pagination-bullet {
 }
 
 .exploreCategoryName {
+  position: relative;
+  top: -28px;
+  padding: 1px 5px;
+  background-color: var(--secondaryBackground);
   font-weight: 500;
   text-align: left;
   margin: 5px auto;
+  border-radius: 0 0 5px 5px;
 }
 
 .category {
@@ -415,7 +421,7 @@ span.swiper-pagination-bullet {
 
 .categoryListingImg {
   width: 30%;
-  height: 100px;
+  height: 125px;
   border-radius: 1.5rem;
   object-fit: cover;
   margin-right: 10px;
@@ -424,7 +430,7 @@ span.swiper-pagination-bullet {
 @media (min-width: 1024px) {
   .categoryListingImg {
     width: 19%;
-    height: 217px;
+    height: 150px;
   }
 }
 
@@ -582,7 +588,7 @@ span.swiper-pagination-bullet {
   font-weight: 600;
   color: var(--buttonColor);
   background-color: var(--buttonBackground);
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 1rem;
 }
 
@@ -597,12 +603,14 @@ span.swiper-pagination-bullet {
 }
 
 .profileDetailsText {
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 .changePersonalDetails {
   cursor: pointer;
   font-weight: 600;
+  font-size: 1.1rem;
   color: #212529;
 }
 
@@ -681,6 +689,7 @@ span.swiper-pagination-bullet {
 .listingText {
   margin-top: 3rem;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .lisitingsList {
