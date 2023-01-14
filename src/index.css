@@ -95,11 +95,27 @@ button {
 .removeIcon {
   cursor: pointer;
   position: relative;
+  margin-right: 5px;
+  background-color: var(--buttonColor);
+  border-radius: 1.5rem;
+  opacity: 0.8;
+}
+
+.removeIcon:hover {
+  opacity: 1;
 }
 
 .editIcon {
   cursor: pointer;
   position: relative;
+  margin-right: 10px;
+  background-color: var(--buttonColor);
+  border-radius: 1.5rem;
+  opacity: 0.8;
+}
+
+.editIcon:hover {
+  opacity: 1;
 }
 
 .pageContainer,
@@ -413,6 +429,9 @@ span.swiper-pagination-bullet {
   align-items: center;
   margin-bottom: 1rem;
   position: relative;
+  max-width: 500px;
+  background-color: var(--secondaryBackground);
+  border-radius: 1.5rem;
 }
 
 .categoryListingLink {
@@ -421,8 +440,8 @@ span.swiper-pagination-bullet {
 
 .categoryListingImg {
   width: 30%;
-  height: 125px;
-  border-radius: 1.5rem;
+  height: 160px;
+  border-radius: 1.5rem 0 0 1.5rem;
   object-fit: cover;
   margin-right: 10px;
 }
