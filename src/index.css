@@ -99,10 +99,12 @@ button {
   background-color: var(--buttonColor);
   border-radius: 1.5rem;
   opacity: 0.8;
+  transition: 0.5s;
 }
 
 .removeIcon:hover {
   opacity: 1;
+  transition: 0.5s;
 }
 
 .editIcon {
@@ -112,10 +114,12 @@ button {
   background-color: var(--buttonColor);
   border-radius: 1.5rem;
   opacity: 0.8;
+  transition: 0.5s;
 }
 
 .editIcon:hover {
   opacity: 1;
+  transition: 0.5s;
 }
 
 .pageContainer,
@@ -432,6 +436,13 @@ span.swiper-pagination-bullet {
   max-width: 500px;
   background-color: var(--secondaryBackground);
   border-radius: 1.5rem;
+  box-shadow: 5px 5px 5px var(--shadow);
+  transition: 0.5s;
+}
+
+.categoryListing:hover {
+  box-shadow: 10px 10px 10px var(--shadow);
+  transition: 0.5s;
 }
 
 .categoryListingLink {
@@ -609,10 +620,12 @@ span.swiper-pagination-bullet {
   background-color: var(--buttonBackground);
   padding: 0.35rem 0.85rem;
   border-radius: 1rem;
+  transition: 0.5s;
 }
 
 .logOut:hover {
-  box-shadow: 5px 5px 5px var(--shadow);
+  box-shadow: 10px 10px 10px var(--shadow);
+  transition: 0.5s;
 }
 
 .profileDetailsHeader {
@@ -631,10 +644,12 @@ span.swiper-pagination-bullet {
   font-weight: 600;
   font-size: 1.1rem;
   color: #212529;
+  transition: 0.5s;
 }
 
 .changePersonalDetails:hover {
-  text-shadow: 2px 2px 2px var(--shadow);
+  text-shadow: 10px 10px 10px var(--shadow);
+  transition: 0.5s;
 }
 
 .profileCard {
@@ -699,10 +714,16 @@ span.swiper-pagination-bullet {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.5s;
 }
 
 .createListing:hover {
-  opacity: 0.9;
+  box-shadow: 10px 10px 10px var(--shadow);
+  transition: 0.5s;
+}
+
+.createListing p {
+  padding: 0 5px;
 }
 
 .listingText {
