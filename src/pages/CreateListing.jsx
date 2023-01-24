@@ -308,7 +308,7 @@ function CreateListing() {
             id="link"
             value={link}
             onChange={onMutate}
-            maxLength="100"
+            maxLength="40"
             minLength="5"
             required
           />

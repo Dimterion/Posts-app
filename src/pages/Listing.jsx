@@ -77,7 +77,6 @@ function Listing() {
         ) : (
           <p className="listingName">{listing.name}</p>
         )}
-        <p className="listingLocation">{listing.details}</p>
         <p className="listingType">
           {listing.type === "freelance" ? "Freelance" : "Full-Time"}
         </p>
@@ -92,9 +91,16 @@ function Listing() {
         </ul>
         <p className="listingLocationTitle">Details</p>
         <p>{listing.details}</p>
-        <a href={`${listing.link}`} className="primaryButton">
-          Link to the offer
+        <p className="listingLinkTitle">Link</p>
+        <a
+          className="listingLink"
+          href={`${listing.link}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {listing.link}
         </a>
+        <p></p>
       </div>
     </main>
   );

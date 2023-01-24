@@ -15,9 +15,10 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
           className="categoryListingImg"
         />
         <div className="categoryListingDetails">
-          <p className="categoryListingLocation">{listing.details}</p>
           <p className="categoryListingName">{listing.name}</p>
-          <p className="categoryListingPrice">${listing.regularPrice} / Month</p>
+          <p className="categoryListingPrice">
+            ${listing.regularPrice} / Month
+          </p>
           <div className="categoryListingInfoDiv">
             <p className="categoryListingInfoText">
               {listing.experience > 1

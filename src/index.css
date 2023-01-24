@@ -590,6 +590,28 @@ span.swiper-pagination-bullet {
   font-size: 1.25rem;
 }
 
+.listingLinkTitle {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.listingLink {
+  text-decoration: underline;
+  width: fit-content;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 820px) {
+  .listingLink {
+    font-size: 1rem;
+  }
+}
+
+.listingLink:hover {
+  text-shadow: 1px 1px 1px var(--shadow);
+}
+
 .linkCopied {
   position: fixed;
   top: 9%;
