@@ -68,11 +68,11 @@ function Listing() {
       <div className="listingDetails">
         {listing.regularPrice > 0 ? (
           <p className="listingName">
-            {listing.name} - $
-            {listing.regularPrice
-              .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-            / Month
+            {listing.name}{" "}
+            {listing.regularPrice &&
+              `- ${listing.regularPrice
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}$ / Month`}
           </p>
         ) : (
           <p className="listingName">{listing.name}</p>

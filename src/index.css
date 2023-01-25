@@ -397,25 +397,29 @@ span.swiper-pagination-bullet {
 
 .exploreCategories a {
   width: 45%;
+  transition: 1s;
+}
+
+.exploreCategories a:hover {
+  box-shadow: 5px 5px 5px var(--shadow);
+  transition: 1s;
 }
 
 .exploreCategoryImg {
-  min-height: 115px;
+  min-height: 100px;
   height: 15vw;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   object-fit: cover;
   margin: 0 auto;
 }
 
 .exploreCategoryName {
-  position: relative;
-  top: -28px;
   padding: 1px 5px;
   background-color: var(--secondaryBackground);
   font-weight: 500;
   text-align: left;
-  margin: 5px auto;
+  margin: -5px auto 0;
   border-radius: 0 0 5px 5px;
 }
 
