@@ -23,9 +23,11 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
           </p>
           <div className="categoryListingInfoDiv">
             <p className="categoryListingInfoText">
-              {listing.experience > 1
-                ? `Experience: ${listing.experience} years`
-                : "Experience: 1 year"}
+              {listing.experience !== 0 &&
+                (listing.experience > 1
+                  ? `Experience: ${listing.experience} years`
+                  : "Experience: 1 year")}
+              {listing.experience === 0 && `Experience: Junior position`}
             </p>
           </div>
         </div>

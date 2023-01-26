@@ -553,6 +553,12 @@ span.swiper-pagination-bullet {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 1s;
+}
+
+.shareIconDiv:hover {
+  background-color: var(--primaryBackground);
+  transition: 1s;
 }
 
 .listingName {

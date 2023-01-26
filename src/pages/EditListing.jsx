@@ -247,7 +247,9 @@ function EditListing() {
           />
           <div className="formRooms flex">
             <div>
-              <label className="formLabel">Experience</label>
+              <label className="formLabel">
+                Experience (0 = Junior position)
+              </label>
               <input
                 className="formInputSmall"
                 type="number"

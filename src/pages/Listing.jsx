@@ -82,9 +82,11 @@ function Listing() {
         </p>
         <ul className="listingDetailsList">
           <li>
-            {listing.experience > 1
-              ? `Experience: ${listing.experience} years`
-              : "Experience: 1 year"}
+            {listing.experience !== 0 &&
+              (listing.experience > 1
+                ? `Experience: ${listing.experience} years`
+                : "Experience: 1 year")}
+            {listing.experience === 0 && `Experience: Junior position`}
           </li>
           <li>{listing.remote && "Remote"}</li>
           <li>{listing.beginnerFriendly && "Beginner-friendly"}</li>
