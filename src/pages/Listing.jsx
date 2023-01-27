@@ -69,7 +69,7 @@ function Listing() {
         {listing.regularPrice > 0 ? (
           <p className="listingName">
             {listing.name}{" "}
-            {listing.regularPrice &&
+            {listing.regularPrice !== 0 &&
               `- ${listing.regularPrice
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}$ / Month`}

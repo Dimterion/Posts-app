@@ -63,7 +63,7 @@ function Slider() {
               >
                 <p className="swiperSlideText">{data.name}</p>
                 <p className="swiperSlidePrice">
-                  {data.regularPrice && `${data.regularPrice}$ / Month`}
+                  {data.regularPrice !== 0 && `${data.regularPrice}$ / Month`}
                 </p>
               </div>
             </SwiperSlide>

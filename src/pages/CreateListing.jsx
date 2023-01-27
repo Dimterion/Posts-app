@@ -288,7 +288,9 @@ function CreateListing() {
             onChange={onMutate}
             required
           />
-          <label className="formLabel">Average Salary</label>
+          <label className="formLabel">
+            Average Salary (won't be displayed if set as 0)
+          </label>
           <div className="formPriceDiv">
             <input
               className="formInputSmall"
