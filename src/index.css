@@ -414,9 +414,9 @@ span.swiper-pagination-bullet {
 }
 
 .exploreCategoryName {
-  padding: 1px 5px;
+  padding: 5px 10px;
   background-color: var(--secondaryBackground);
-  font-weight: 500;
+  font-weight: 600;
   text-align: left;
   margin: -5px auto 0;
   border-radius: 0 0 5px 5px;
@@ -527,7 +527,7 @@ span.swiper-pagination-bullet {
 }
 
 .loadMore:hover {
-  box-shadow: 5px 5px 5px var(--shadow);
+  box-shadow: 10px 10px 10px var(--shadow);
   transition: 0.5s;
 }
 

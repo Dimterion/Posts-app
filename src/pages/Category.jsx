@@ -133,7 +133,7 @@ function Category() {
           )}
         </>
       ) : (
-        <p>No listings for {params.categoryName}</p>
+        <p>Nothing posted for {params.categoryName}</p>
       )}
     </div>
   );
