@@ -16,8 +16,8 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
         />
         <div className="categoryListingDetails">
           <p className="categoryListingName">{listing.name}</p>
-          <p className="categoryListingPrice">
-            {listing.regularPrice !== 0 && `${listing.regularPrice}$ / Month`}
+          <p className="categoryListingSalary">
+            {listing.salary !== 0 && `${listing.salary}$ / Month`}
           </p>
           <div className="categoryListingInfoDiv">
             <p className="categoryListingInfoText">

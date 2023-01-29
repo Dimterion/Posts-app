@@ -24,7 +24,7 @@ function EditListing() {
     remote: false,
     beginnerFriendly: false,
     details: "",
-    regularPrice: 0,
+    salary: 0,
     images: {},
     link: "",
   });
@@ -36,7 +36,7 @@ function EditListing() {
     remote,
     beginnerFriendly,
     details,
-    regularPrice,
+    salary,
     images,
     link,
   } = formData;
@@ -322,19 +322,21 @@ function EditListing() {
           <label className="formLabel">
             Average Salary (won't be displayed if set as 0)
           </label>
-          <div className="formPriceDiv">
+          <div className="formSalaryDiv">
             <input
               className="formInputSmall"
               type="number"
-              id="regularPrice"
-              value={regularPrice}
+              id="salary"
+              value={salary}
               onChange={onMutate}
               min="0"
               max="5000000"
               required
             />
-            {type === "freelance" && <p className="formPriceText">$ / Month</p>}
-            {type === "full-time" && <p className="formPriceText">$</p>}
+            {type === "freelance" && (
+              <p className="formSalaryText">$ / Month</p>
+            )}
+            {type === "full-time" && <p className="formSalaryText">$</p>}
           </div>
           <label className="formLabel">Link to the application page</label>
           <input

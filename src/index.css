@@ -378,7 +378,7 @@ span.swiper-pagination-bullet {
   text-align: center;
 }
 
-.swiperSlidePrice {
+.swiperSlideSalary {
   color: #000;
   position: relative;
   left: 1vw;
@@ -490,7 +490,7 @@ span.swiper-pagination-bullet {
   margin: 0;
 }
 
-.categoryListingPrice {
+.categoryListingSalary {
   margin-top: 0.5rem;
   font-weight: 600;
   font-size: 1.1rem;
@@ -838,12 +838,12 @@ span.swiper-pagination-bullet {
   max-width: 326px;
 }
 
-.formPriceDiv {
+.formSalaryDiv {
   display: flex;
   align-items: center;
 }
 
-.formPriceText {
+.formSalaryText {
   margin-left: -1.5rem;
   font-weight: 600;
 }

@@ -66,11 +66,11 @@ function Listing() {
       </div>
       {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
       <div className="listingDetails">
-        {listing.regularPrice > 0 ? (
+        {listing.salary > 0 ? (
           <p className="listingName">
             {listing.name}{" "}
-            {listing.regularPrice !== 0 &&
-              `- ${listing.regularPrice
+            {listing.salary !== 0 &&
+              `- ${listing.salary
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}$ / Month`}
           </p>
