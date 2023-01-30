@@ -104,11 +104,10 @@ function Category() {
       <header>
         <p className="pageHeader">
           {params.categoryName === "freelance"
-            ? "Freelance Jobs"
+            ? "Freelance / Temporary Jobs"
             : "Full-Time Jobs"}
         </p>
       </header>
-
       {loading ? (
         <Spinner />
       ) : listings && listings.length > 0 ? (

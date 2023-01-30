@@ -18,7 +18,7 @@ function EditListing() {
   const [loading, setLoading] = useState(false);
   const [listing, setListing] = useState(false);
   const [formData, setFormData] = useState({
-    type: "freelance",
+    type: "full-time",
     name: "",
     experience: 1,
     remote: false,
@@ -209,7 +209,7 @@ function EditListing() {
       </header>
       <main>
         <form onSubmit={onSubmit}>
-          <label className="formLabel">Freelance / Full-Time</label>
+          <label className="formLabel">Full-Time | Freelance / Temporary</label>
           <div className="formButtons">
             <button
               type="button"
@@ -231,7 +231,7 @@ function EditListing() {
               value="freelance"
               onClick={onMutate}
             >
-              Freelance
+              Freelance / Temporary
             </button>
           </div>
           <label className="formLabel">Position</label>
@@ -333,10 +333,7 @@ function EditListing() {
               max="5000000"
               required
             />
-            {type === "freelance" && (
-              <p className="formSalaryText">$ / Month</p>
-            )}
-            {type === "full-time" && <p className="formSalaryText">$</p>}
+            <p className="formSalaryText">$ / Month</p>
           </div>
           <label className="formLabel">Link to the application page</label>
           <input

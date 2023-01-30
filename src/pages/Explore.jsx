@@ -21,7 +21,7 @@ function Explore() {
               alt="freelance"
               className="exploreCategoryImg"
             />
-            <p className="exploreCategoryName">Freelance</p>
+            <p className="exploreCategoryName">Freelance / Temporary</p>
           </Link>
           <Link to="/category/full-time">
             <img

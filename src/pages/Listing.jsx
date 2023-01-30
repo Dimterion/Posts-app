@@ -78,7 +78,7 @@ function Listing() {
           <p className="listingName">{listing.name}</p>
         )}
         <p className="listingType">
-          {listing.type === "freelance" ? "Freelance" : "Full-Time"}
+          {listing.type === "freelance" ? "Freelance / Temporary" : "Full-Time"}
         </p>
         <ul className="listingDetailsList">
           <li>

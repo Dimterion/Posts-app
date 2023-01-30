@@ -150,7 +150,7 @@ function Profile() {
         </div>
         <Link to="/create-listing" className="createListing">
           <img src={checkIcon} alt="home" />
-          <p>Post full-time or freelance job offers</p>
+          <p>Post full-time or freelance / temporary job offers</p>
           <img src={arrowRight} alt="arrow right" />
         </Link>
         {!loading && listings?.length > 0 && (
