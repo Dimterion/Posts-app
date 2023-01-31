@@ -96,9 +96,9 @@ function EditListing() {
 
     setLoading(true);
 
-    if (images.length > 6) {
+    if (images.length > 2) {
       setLoading(false);
-      toast.error("Max 6 images");
+      toast.error("Max 2 images");
       return;
     }
 
@@ -335,7 +335,7 @@ function EditListing() {
             />
             <p className="formSalaryText">$ / Month</p>
           </div>
-          <label className="formLabel">Link to the application page</label>
+          <label className="formLabel">Link</label>
           <input
             className="formInputName"
             type="text"
@@ -347,9 +347,7 @@ function EditListing() {
             required
           />
           <label className="formLabel">Images</label>
-          <p className="imagesInfo">
-            The first image will be the cover (max 2).
-          </p>
+          <p className="imagesInfo">First image will be the cover (max 2).</p>
           <input
             className="formInputFile"
             type="file"
