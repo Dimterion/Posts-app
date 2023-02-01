@@ -698,8 +698,8 @@ span.swiper-pagination-bullet {
 
 .profileName,
 .profileEmail,
-.profileAddress,
-.profileAddressActive,
+.profileDetails,
+.profileDetailsActive,
 .profileEmailActive,
 .profileNameActive {
   all: unset;
@@ -716,8 +716,8 @@ span.swiper-pagination-bullet {
 }
 
 .profileEmail,
-.profileAddress,
-.profileAddressActive,
+.profileDetails,
+.profileDetailsActive,
 .profileEmailActive {
   font-weight: 500;
 }
@@ -728,7 +728,7 @@ span.swiper-pagination-bullet {
   border-radius: 5px;
 }
 
-.profileAddressActive {
+.profileDetailsActive {
   background-color: var(--secondaryBackground);
   text-indent: 5px;
   border-radius: 5px;
@@ -784,7 +784,7 @@ span.swiper-pagination-bullet {
 
 .formButton,
 .formInput,
-.formInputAddress,
+.formInputDetails,
 .formInputName,
 .formInputSmall,
 .formInputFile,
@@ -810,7 +810,7 @@ span.swiper-pagination-bullet {
 }
 
 .formInput,
-.formInputAddress,
+.formInputDetails,
 .formInputName,
 .formInputSmall,
 .formInputFile {
@@ -832,7 +832,7 @@ span.swiper-pagination-bullet {
   max-width: 326px;
 }
 
-.formInputAddress {
+.formInputDetails {
   padding: 0.9rem 1rem;
   width: 90%;
   max-width: 326px;

@@ -124,13 +124,11 @@ function CreateListing() {
     const formDataCopy = {
       ...formData,
       imgUrls,
-
       timestamp: serverTimestamp(),
     };
 
     formDataCopy.details = details;
     delete formDataCopy.images;
-    delete formDataCopy.details;
 
     const docRef = await addDoc(collection(db, "listings"), formDataCopy);
     setLoading(false);
@@ -281,7 +279,7 @@ function CreateListing() {
           </div>
           <label className="formLabel">Details</label>
           <textarea
-            className="formInputAddress"
+            className="formInputDetails"
             type="text"
             id="details"
             value={details}

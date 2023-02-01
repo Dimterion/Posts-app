@@ -159,7 +159,6 @@ function EditListing() {
 
     formDataCopy.details = details;
     delete formDataCopy.images;
-    delete formDataCopy.details;
 
     // Update listing
     const docRef = doc(db, "listings", params.listingId);
@@ -312,7 +311,7 @@ function EditListing() {
           </div>
           <label className="formLabel">Details</label>
           <textarea
-            className="formInputAddress"
+            className="formInputDetails"
             type="text"
             id="details"
             value={details}
