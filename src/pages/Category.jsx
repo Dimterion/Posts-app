@@ -132,7 +132,7 @@ function Category() {
           )}
         </>
       ) : (
-        <p>Nothing posted for {params.categoryName}</p>
+        <p>Nothing has been posted so far.</p>
       )}
     </div>
   );
