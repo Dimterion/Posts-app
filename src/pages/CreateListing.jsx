@@ -14,13 +14,12 @@ import { v4 as uuidv4 } from "uuid";
 import Spinner from "../components/Spinner";
 
 function CreateListing() {
-  // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: "full-time",
     name: "",
     link: "",
-    experience: 1,
+    experience: 0,
     remote: true,
     beginnerFriendly: true,
     details: "",
@@ -104,7 +103,6 @@ function CreateListing() {
           },
           () => {
             // Handle successful uploads on complete
-            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
               resolve(downloadURL);
             });
@@ -117,7 +115,7 @@ function CreateListing() {
       [...images].map((image) => storeImage(image))
     ).catch(() => {
       setLoading(false);
-      toast.error("Images not uploaded");
+      toast.error("Images were not uploaded");
       return;
     });
 
@@ -132,7 +130,7 @@ function CreateListing() {
 
     const docRef = await addDoc(collection(db, "listings"), formDataCopy);
     setLoading(false);
-    toast.success("Listing saved");
+    toast.success("Job offer has been saved");
     navigate(`/category/${formDataCopy.type}/${docRef.id}`);
   };
 
@@ -172,7 +170,7 @@ function CreateListing() {
   return (
     <div className="profile">
       <header>
-        <p className="pageHeader">Create a Listing</p>
+        <p className="pageHeader">Create a Job Offer</p>
       </header>
       <main>
         <form onSubmit={onSubmit}>

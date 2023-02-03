@@ -14,19 +14,18 @@ import { v4 as uuidv4 } from "uuid";
 import Spinner from "../components/Spinner";
 
 function EditListing() {
-  // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
   const [listing, setListing] = useState(false);
   const [formData, setFormData] = useState({
     type: "full-time",
     name: "",
-    experience: 1,
+    link: "",
+    experience: 0,
     remote: false,
     beginnerFriendly: false,
     details: "",
     salary: 0,
     images: {},
-    link: "",
   });
 
   const {
@@ -49,7 +48,7 @@ function EditListing() {
   // Redirect if listing is not user's
   useEffect(() => {
     if (listing && listing.userRef !== auth.currentUser.uid) {
-      toast.error("You can not edit that listing");
+      toast.error("You can not edit that job offer");
       navigate("/");
     }
   });
@@ -66,14 +65,14 @@ function EditListing() {
         setLoading(false);
       } else {
         navigate("/");
-        toast.error("Listing does not exist");
+        toast.error("Job offer does not exist");
       }
     };
 
     fetchListing();
   }, [params.listingId, navigate]);
 
-  // Sets userRef to logged in user
+  // Sets userRef to logged-in user
   useEffect(() => {
     if (isMounted) {
       onAuthStateChanged(auth, (user) => {
@@ -134,7 +133,6 @@ function EditListing() {
           },
           () => {
             // Handle successful uploads on complete
-            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
               resolve(downloadURL);
             });
@@ -147,7 +145,7 @@ function EditListing() {
       [...images].map((image) => storeImage(image))
     ).catch(() => {
       setLoading(false);
-      toast.error("Images not uploaded");
+      toast.error("Images were not uploaded");
       return;
     });
 
@@ -164,7 +162,7 @@ function EditListing() {
     const docRef = doc(db, "listings", params.listingId);
     await updateDoc(docRef, formDataCopy);
     setLoading(false);
-    toast.success("Listing saved");
+    toast.success("Job offer has been saved");
     navigate(`/category/${formDataCopy.type}/${docRef.id}`);
   };
 
@@ -204,7 +202,7 @@ function EditListing() {
   return (
     <div className="profile">
       <header>
-        <p className="pageHeader">Edit Listing</p>
+        <p className="pageHeader">Edit Job Offer</p>
       </header>
       <main>
         <form onSubmit={onSubmit}>
@@ -261,7 +259,7 @@ function EditListing() {
               />
             </div>
           </div>
-          <label className="formLabel"> Remote</label>
+          <label className="formLabel">Remote</label>
           <div className="formButtons">
             <button
               className={remote ? "formButtonActive" : "formButton"}
@@ -358,7 +356,7 @@ function EditListing() {
             required
           />
           <button type="submit" className="primaryButton createListingButton">
-            Edit Listing
+            Edit Job Offer
           </button>
         </form>
       </main>

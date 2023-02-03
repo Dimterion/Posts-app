@@ -53,7 +53,7 @@ function Category() {
         setListings(listings);
         setLoading(false);
       } catch (error) {
-        toast.error("Could not fetch listings");
+        toast.error("Could not fetch job offers");
       }
     };
 
@@ -93,7 +93,7 @@ function Category() {
       setListings((prevState) => [...prevState, ...listings]);
       setLoading(false);
     } catch (error) {
-      toast.error("Could not fetch listings");
+      toast.error("Could not fetch job offers");
     }
   };
 

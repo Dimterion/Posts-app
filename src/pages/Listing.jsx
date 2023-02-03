@@ -64,7 +64,7 @@ function Listing() {
       >
         <img src={shareIcon} alt="" />
       </div>
-      {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
+      {shareLinkCopied && <p className="linkCopied">Link is copied!</p>}
       <div className="listingDetails">
         {listing.salary > 0 ? (
           <p className="listingName">
