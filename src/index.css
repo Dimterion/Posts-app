@@ -344,18 +344,18 @@ button {
 
 .swiper {
   min-height: 225px;
-  height: 15vw;
+  height: 10vw;
 }
 
 span.swiper-pagination-bullet {
-  background-color: #000;
+  background-color: var(--buttonColor);
   opacity: 1;
   width: 15px;
   height: 15px;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--primaryBackground) !important;
+  background-color: var(--buttonBackground) !important;
 }
 
 .swiperSlideDiv {
@@ -370,11 +370,6 @@ span.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   border-radius: 0;
-}
-
-.swiperSlideImg {
-  width: 100%;
-  object-fit: cover;
 }
 
 .swiperSlideText {
@@ -394,7 +389,7 @@ span.swiper-pagination-bullet {
   font-weight: 600;
   width: 165px;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--secondaryBackground);
   border-radius: 1rem;
 }
 
