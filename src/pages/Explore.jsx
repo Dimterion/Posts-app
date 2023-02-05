@@ -15,14 +15,6 @@ function Explore() {
         <Slider />
         <p className="exploreCategoryHeading">Categories</p>
         <div className="exploreCategories">
-          <Link to="/category/freelance">
-            <img
-              src={freelance}
-              alt="freelance"
-              className="exploreCategoryImg"
-            />
-            <p className="exploreCategoryName">Freelance / Temporary</p>
-          </Link>
           <Link to="/category/full-time">
             <img
               src={fullTime}
@@ -30,6 +22,14 @@ function Explore() {
               className="exploreCategoryImg"
             />
             <p className="exploreCategoryName">Full-Time</p>
+          </Link>
+          <Link to="/category/freelance">
+            <img
+              src={freelance}
+              alt="freelance"
+              className="exploreCategoryImg"
+            />
+            <p className="exploreCategoryName">Freelance / Temporary</p>
           </Link>
         </div>
       </main>
