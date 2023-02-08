@@ -53,14 +53,14 @@ function Category() {
         setListings(listings);
         setLoading(false);
       } catch (error) {
-        toast.error("Could not fetch job offers");
+        toast.error("Could not load job offers");
       }
     };
 
     fetchListings();
   }, [params.categoryName]);
 
-  // Pagination / Load More
+  // Load More Listings
   const onFetchMoreListings = async () => {
     try {
       // Get reference
@@ -93,11 +93,14 @@ function Category() {
       setListings((prevState) => [...prevState, ...listings]);
       setLoading(false);
     } catch (error) {
-      toast.error("Could not fetch job offers");
+      toast.error("Could not load job offers");
     }
   };
 
-  document.title = "Posts App";
+  document.title =
+    params.categoryName === "freelance"
+      ? "Freelance / Temporary Jobs"
+      : "Full-Time Jobs";
 
   return (
     <div className="category">

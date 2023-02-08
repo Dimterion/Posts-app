@@ -105,7 +105,7 @@ function Profile() {
 
   const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`);
 
-  document.title = "Posts App";
+  document.title = "Posts App - Profile";
 
   return (
     <div className="profile">
