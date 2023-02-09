@@ -9,6 +9,12 @@
   --fieldBackground: #6c757d;
   --shadow: rgba(0, 0, 0, 0.1);
   --spinner: #212529;
+  --navBarItem: #8f8f8f;
+  --navBarItemActive: #2c2c2c;
+  --input: #fff;
+  --sliderText: #fff;
+  --sliderTextBackground: rgba(0, 0, 0, 0.5);
+  --sliderSalary: #212529;
 }
 
 * {
@@ -219,22 +225,24 @@ button {
   margin-top: 0.25rem;
   font-size: 14px;
   font-weight: 600;
-  color: #8f8f8f;
+  color: var(--navBarItem);
 }
 
 .navbarListItemNameActive {
-  color: #2c2c2c;
+  color: var(--navBarItemActive);
 }
 
 .nameInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/badgeIcon.svg") #fff 1.5% center no-repeat;
+  background: url("./assets/svg/badgeIcon.svg") var(--input) 1.5% center
+    no-repeat;
   background-size: 25px;
 }
 
 .emailInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/personIcon.svg") #fff 1.5% center no-repeat;
+  background: url("./assets/svg/personIcon.svg") var(--input) 1.5% center
+    no-repeat;
   background-size: 25px;
 }
 
@@ -244,7 +252,8 @@ button {
 
 .passwordInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/lockIcon.svg") #fff 1.5% center no-repeat;
+  background: url("./assets/svg/lockIcon.svg") var(--input) 1.5% center
+    no-repeat;
   background-size: 25px;
 }
 
@@ -375,17 +384,17 @@ span.swiper-pagination-bullet {
 }
 
 .swiperSlideText {
-  color: #fff;
+  color: var(--sliderText);
   position: relative;
   font-weight: 600;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--sliderTextBackground);
   padding: 0.5rem;
   text-align: center;
   border-radius: 1rem 1rem 0 0;
 }
 
 .swiperSlideSalary {
-  color: #000;
+  color: var(--sliderSalary);
   position: relative;
   left: 1vw;
   font-weight: 600;
@@ -539,11 +548,10 @@ span.swiper-pagination-bullet {
   margin: 0 auto;
   text-align: center;
   padding: 0.5rem;
-  background-color: #000;
+  background-color: var(--buttonBackground);
   color: var(--secondaryBackground);
   font-weight: 600;
   border-radius: 5px;
-  opacity: 0.7;
   margin-top: 2rem;
   transition: 0.5s;
 }
@@ -551,6 +559,7 @@ span.swiper-pagination-bullet {
 .loadMore:hover {
   box-shadow: 10px 10px 10px var(--shadow);
   transition: 0.5s;
+  opacity: 0.9;
 }
 
 .listingsList {
@@ -696,7 +705,7 @@ span.swiper-pagination-bullet {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #212529;
+  color: var(--link);
   transition: 0.5s;
 }
 
@@ -706,7 +715,7 @@ span.swiper-pagination-bullet {
 }
 
 .profileCard {
-  background-color: #fff;
+  background-color: var(--input);
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 5px 5px 5px var(--shadow);
@@ -757,7 +766,7 @@ span.swiper-pagination-bullet {
 }
 
 .createListing {
-  background-color: #fff;
+  background-color: var(--input);
   border-radius: 1rem;
   padding: 0.25rem 1rem;
   box-shadow: 5px 5px 5px var(--shadow);
@@ -812,7 +821,7 @@ span.swiper-pagination-bullet {
 .formInputFile,
 .formButtonActive {
   padding: 0.5rem 1rem;
-  background-color: #fff;
+  background-color: var(--input);
   font-weight: 600;
   border-radius: 5px;
   font-size: 1rem;
