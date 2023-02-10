@@ -94,7 +94,7 @@ button {
 }
 
 .primaryButton:hover {
-  box-shadow: 5px 5px 5px var(--shadow);
+  box-shadow: 15px 15px 15px var(--shadow);
   transition: 0.5s;
 }
 

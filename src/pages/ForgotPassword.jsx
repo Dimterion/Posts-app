@@ -14,9 +14,9 @@ function ForgotPassword() {
     try {
       const auth = getAuth();
       await sendPasswordResetEmail(auth, email);
-      toast.success("Email was sent");
+      toast.success("Please check your account email");
     } catch (error) {
-      toast.error("Could not send reset email");
+      toast.error("Could not send password reset email");
     }
   };
 
@@ -41,7 +41,7 @@ function ForgotPassword() {
             Sign In
           </Link>
           <div className="signInBar">
-            <div className="signInText">Send Reset Link</div>
+            <div className="signInText">Send Password Reset Link</div>
             <button className="signInButton">
               <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>

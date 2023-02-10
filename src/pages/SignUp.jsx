@@ -55,7 +55,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      toast.error("Something went wrong with the registration");
+      toast.error("Please make sure to fill out all of the fields");
     }
   };
 
