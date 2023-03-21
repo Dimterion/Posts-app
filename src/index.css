@@ -184,6 +184,7 @@ button {
   font-size: 2.25rem;
   font-weight: 800;
   margin: 5px auto 25px;
+  text-align: center;
 }
 
 .navbar {
@@ -343,8 +344,17 @@ button {
 .exploreHeading,
 .exploreCategoryHeading {
   font-weight: 700;
-  font-size: 1.25rem;
-  margin: 5px auto;
+  font-size: 1.5rem;
+  margin: 10px auto;
+  text-align: center;
+  text-shadow: 5px 5px 5px var(--shadow);
+}
+
+@media (max-width: 1024px) {
+  .exploreHeading,
+  .exploreCategoryHeading {
+    margin: 0 auto;
+  }
 }
 
 .exploreCategoryHeading {
@@ -369,11 +379,17 @@ span.swiper-pagination-bullet {
 
 .swiperSlideDiv {
   position: relative;
-  width: 90%;
+  width: 85%;
   height: 90%;
   margin: auto;
   border-radius: 1rem;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .swiperSlideDiv {
+    width: 100%;
+  }
 }
 
 .swiperSlideDiv-listing {
