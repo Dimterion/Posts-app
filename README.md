@@ -1,10 +1,10 @@
 # Posts App
 
-An application to create listings for the available programming jobs.
+An application to create listings for the available open programming jobs.
 
 ## Details
 
-This app allows to view the list of available positions in Full-Time and Freelance / Temporary categories. Users can create and edit their accounts as well as add and edit listings.
+This app allows to view the list of available open positions in Full-Time and Freelance / Temporary categories. Users can create / edit their accounts and add / edit listings.
 
 Currently the application is in Work In Progress state as I'm mostly interested to see at what scale I can refactor the project and how all of the components of the application work togethter.
 
@@ -14,7 +14,7 @@ Due to this the project and its current [live version](https://rad-sundae-cd883a
 
 ### Main page
 
-- A carousel with featured listings to navigate to each one
+- A carousel with featured listings to navigate to each one of them
 - A section with two main categories for the listings
 - A footer to navigate to the Profile or Explore pages
 
